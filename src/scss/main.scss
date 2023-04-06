@@ -141,7 +141,8 @@ body {
   width: 0;
   height: 0;
 }
-.abusteku-deagulus, .abusteku-deagulusnew {
+.abusteku-deagulus,
+.abusteku-deagulusnew {
   max-height: 180px;
 }
 .abusteku-deagulusnew ul,
@@ -169,7 +170,7 @@ body {
   padding: 24px 16px;
   margin-top: 24px;
 }
-.abusteku-deagulus li{
+.abusteku-deagulus li {
   width: 224px;
   flex-shrink: 0;
   margin-right: 16px;
@@ -755,25 +756,26 @@ h1 {
   font-family: "TT Lakes";
   line-height: 24px;
   font-size: 16px;
-  height: 24px;
   border: none;
-  margin: 0;
-  margin-left: 16px;
-  padding: 0;
+  margin: 0 8px;
   white-space: nowrap;
   color: #7e7e82;
-}
-.lid .scroll a:focus,
-.scroll a:hover,
-.scroll a:active {
   height: 40px;
   width: auto;
-  background: #ffffff;
-  border: 2px solid #b8ffec;
+  background: transparent;
+  border: none;
   border-radius: 6px;
   padding: 8px 0;
   padding-left: 16.54px;
   padding-right: 9.3px;
+  text-decoration: none;
+}
+.lid .scroll a:focus,
+.scroll a:hover,
+.scroll a:active {
+  background: #ffffff;
+  border: 2px solid #b8ffec;
+  text-decoration: none;
 }
 .lid .conteiner {
   display: flex;
