@@ -15,6 +15,32 @@ let openCard = document.querySelector(".open-card");
 let text = document.querySelector(".conteiner__text");
 let logo = document.querySelector(".abusteku-deagulus");
 let cadr = document.querySelector(".abusteku-deagulusnew");
+let focusFeedback = document.querySelector(".focus-feedback");
+let focusCall = document.querySelector(".focus-call");
+for (let index = 1; index < 17; index++) {
+  let scroll = document.querySelector(".adaptivSlayderlasekun");
+  let id = "slaid" + index;
+  let radio = document.getElementById(id);
+  radio.addEventListener("click", function () {
+    scroll.scrollLeft = 0;
+  });
+}
+for (let index = 1; index < 9; index++) {
+  let scroll = document.querySelectorAll(".adaptivSlayderlasekun")[1];
+  let id = "slaidnew" + index;
+  let radio = document.getElementById(id);
+  radio.addEventListener("click", function () {
+    scroll.scrollLeft = 0;
+  });
+}
+for (let index = 1; index < 6; index++) {
+  let scroll = document.querySelectorAll(".adaptivSlayderlasekun")[2];
+  let id = "slaidlast" + index;
+  let radio = document.getElementById(id);
+  radio.addEventListener("click", function () {
+    scroll.scrollLeft = 0;
+  });
+}
 menuOn.addEventListener("click", function () {
   menu.classList.add("active");
   lid.classList.add("opacity");
@@ -27,6 +53,7 @@ feedbackIcon.addEventListener("click", function () {
   feedback.classList.add("active");
   lid.classList.add("opacity");
   menu.classList.remove("active");
+  focusFeedback.focus();
 });
 feedbackOff.addEventListener("click", function () {
   feedback.classList.remove("active");
@@ -36,6 +63,7 @@ callIcon.addEventListener("click", function () {
   call.classList.add("active");
   lid.classList.add("opacity");
   menu.classList.remove("active");
+  focusCall.focus();
 });
 callOff.addEventListener("click", function () {
   call.classList.remove("active");

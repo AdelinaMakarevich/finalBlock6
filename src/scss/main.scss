@@ -10,6 +10,9 @@
   font-family: "TT Lakes Blod";
   src: url("../fonts/TTLakes-Bold.ttf");
 }
+body {
+  overflow-x: hidden;
+}
 .opacity {
   opacity: 0.2;
 }
@@ -129,16 +132,25 @@
   background-color: #b5b6bc;
 }
 .adaptivSlayderlasekun {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.abusteku-deagulusnew,
-.abusteku-deagulus,
+.adaptivSlayderlasekun::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.abusteku-deagulus, .abusteku-deagulusnew {
+  max-height: 180px;
+}
+.abusteku-deagulusnew ul,
+.abusteku-deagulus ul,
 .abusteku-deaguluslast {
   display: flex;
   width: 100%;
   transition: all 0.6s;
   margin: 0 16px;
-  max-height: 180px;
 }
 .abusteku-deaguluslast {
   max-height: 100%;
@@ -157,13 +169,13 @@
   padding: 24px 16px;
   margin-top: 24px;
 }
-.abusteku-deagulus a {
+.abusteku-deagulus li{
   width: 224px;
   flex-shrink: 0;
   margin-right: 16px;
   margin-bottom: 16px;
 }
-.abusteku-deagulusnew a {
+.abusteku-deagulusnew li {
   width: 190px;
   height: 126px;
   flex-shrink: 0;
@@ -173,10 +185,12 @@
   background-color: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 6%;
-  text-decoration: none;
   background-image: url("../img/go.png");
   background-repeat: no-repeat;
   background-position: 95% 92%;
+}
+.abusteku-deagulusnew a {
+  text-decoration: none;
   font-family: "TT Lakes";
   font-size: 16px;
   line-height: 24px;
@@ -222,7 +236,7 @@
   line-height: 16px;
   color: #7e7e82;
 }
-.menu .form p a {
+.form p a {
   padding: 0;
   margin: 0;
   font-family: "TT Lakes";
@@ -289,7 +303,7 @@ a:active {
   display: none;
 }
 #slaid1:checked ~ .adaptivSlayderlasekun .abusteku-deagulus {
-  transform: translate(0);
+  transform: translateX(0px);
 }
 #slaid2:checked ~ .adaptivSlayderlasekun .abusteku-deagulus {
   transform: translateX(-240px);
@@ -423,7 +437,7 @@ a:active {
   flex-basis: 43%;
   text-align: right;
 }
-.menu ul {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -550,6 +564,10 @@ a:active {
 }
 .menu .buttons:last-child button:hover {
   opacity: 70%;
+}
+.menu footer a {
+  text-decoration: none;
+  color: #000;
 }
 .menu footer li {
   font-family: "TT Lakes";
@@ -870,8 +888,8 @@ a {
   .kadoves {
     display: none;
   }
-  .abusteku-deagulus,
-  .abusteku-deagulusnew {
+  .abusteku-deagulus ul,
+  .abusteku-deagulusnew ul {
     flex-wrap: wrap;
     margin: 0;
     justify-content: space-around;
@@ -879,8 +897,8 @@ a {
   .adaptivSlayder {
     margin-bottom: 48px;
   }
-  .abusteku-deagulus a,
-  .abusteku-deagulusnew a {
+  .abusteku-deagulus li,
+  .abusteku-deagulusnew li {
     margin-right: 24px;
   }
   .show {
@@ -917,7 +935,7 @@ a {
   }
   .new-head {
     display: inline-block;
-    font-family: 'TT Lakes';
+    font-family: "TT Lakes";
   }
   .abusteku-deaguluslast {
     background-color: #ffffff;
